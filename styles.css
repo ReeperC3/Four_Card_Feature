@@ -10,7 +10,7 @@ body {
   color: hsl(234, 12%, 34%);
   background-color: hsl(0, 0%, 100%);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
@@ -19,7 +19,104 @@ body {
   min-height: 100vh;
 }
 
+.main-head-top {
+  font-weight: 200;
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 10px;
+}
+
+.main-head-bot {
+  font-weight: 600;
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 24px;
+}
+
+.main-head-text {
+  max-width: 540px;
+  margin: 0px 8vw;
+  line-height: 1.5;
+}
+
+.card-head {
+  color: hsl(234, 12%, 34%);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-left: 2px;
+}
+
+.card-text {
+  color: hsl(212, 6%, 44%);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+header {
+  margin-top: 8vh;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 200px;
+  max-width: 300px;
+  padding: 35px 30px 20px 30px;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 213, 255, 0.04) 0px 10px 10px -5px;
+  margin: 18px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card div:last-child {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "cyan red blue" "cyan orange blue";
+    align-items: center;
+    justify-content: center;
+  }
+}
+.cyan {
+  border-top: solid hsl(180, 62%, 55%) 5px;
+  grid-area: cyan;
+}
+
+.red {
+  border-top: solid hsl(0, 78%, 62%) 5px;
+  grid-area: red;
+}
+
+.orange {
+  border-top: solid hsl(34, 97%, 64%) 5px;
+  grid-area: orange;
+}
+
+.blue {
+  border-top: solid hsl(212, 86%, 64%) 5px;
+  grid-area: blue;
+}
+
 .attribution {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   font-size: 11px;
   text-align: center;
 }
